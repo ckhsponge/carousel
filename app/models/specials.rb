@@ -23,7 +23,7 @@ class Specials < XmlCache
           xm.item do
             puts link.attributes['href']
             url = "http://www.visitlasvegas.com#{link.attributes['href']}"
-            xm.url url
+            xm.link url
             spans = link.search("//span")
             spans.each do |span|
               case span.attributes['class']

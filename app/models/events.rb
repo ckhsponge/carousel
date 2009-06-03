@@ -18,7 +18,7 @@ class Events < XmlCache
         rss.items.each do |item|
           xm.item do
             puts item.link
-            xm.url item.link
+            xm.link item.link
             doc = Hpricot(open(item.link))
             metas = doc.search("//meta")
             metas.each do |meta|
