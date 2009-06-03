@@ -1,0 +1,2 @@
+module VisitLasVegasHelper
+end
