@@ -1,1 +1,1 @@
-runner "Events.new.write_file; Specials.new.write_file"
+runner "require 'hpricot'; XmlCache.write_all"
