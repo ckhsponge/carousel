@@ -1,6 +1,6 @@
 class XmlCache
   require 'rss'
-  require 'hpricot'
+  #require 'hpricot' #doesn't load so well in mediatemple
   
   def cache_path
     "#{RAILS_ROOT}/cache"
