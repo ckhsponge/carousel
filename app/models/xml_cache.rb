@@ -1,4 +1,7 @@
 class XmlCache
+  require 'rss'
+  require 'hpricot'
+  
   def cache_path
     "#{RAILS_ROOT}/cache"
   end

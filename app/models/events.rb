@@ -1,5 +1,4 @@
 class Events < XmlCache
-  require 'rss'
   
   def intialize
     
