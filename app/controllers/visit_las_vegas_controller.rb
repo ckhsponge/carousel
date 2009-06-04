@@ -13,6 +13,10 @@ class VisitLasVegasController < ApplicationController
     render :xml => Specials.new.read_file
   end
   
+  def specials_write
+    render :xml => Specials.new.to_xml
+  end
+  
 #  def specials_write
 #    Specials.new.write_file
 #    render :text => "done"
