@@ -14,7 +14,7 @@ class Specials < XmlCache
 #    links.each do |link|
 #      puts link.attributes['href']
 #    end
-    #links = links[0,4]
+    #links = links[0,2]
     links_array = []
     links.each do |link|
       line = {}
@@ -46,6 +46,7 @@ class Specials < XmlCache
       #puts "#{xs} - #{ys}"
       ys <=> xs
     end
+    messages = open('http://statics.live.spongecell.com/lasvegas/summer09ad1/v2p/lib/en/Offers-items-message.xml').read
     xm = Builder::XmlMarkup.new(:indent => 2)
     xm.instruct!
     xm.browse do
@@ -60,6 +61,7 @@ class Specials < XmlCache
             xm.image link[:image]
           end
         end
+        xm << messages
       end
     end
     return xm.target!

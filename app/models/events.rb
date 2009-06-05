@@ -10,6 +10,7 @@ class Events < XmlCache
   
   def to_xml
     rss = RSS::Parser.parse(open('http://www.visitlasvegas.com/vegas/special-offers/vegas-right-now/vegas-right-now-rss-feed.jsp').read, false) 
+    messages = open('http://statics.live.spongecell.com/lasvegas/summer09ad1/v2p/lib/en/Events-items-message.xml').read
     xm = Builder::XmlMarkup.new(:indent => 2)
     xm.instruct!
     xm.browse do
@@ -38,6 +39,7 @@ class Events < XmlCache
             end
           end
         end
+        xm << messages
       end
     end
     return xm.target!

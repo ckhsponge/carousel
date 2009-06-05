@@ -10,7 +10,13 @@ class VisitLasVegasController < ApplicationController
   end
   
 #  def specials_write
+#    require 'hpricot'
 #    render :xml => Specials.new.to_xml
+#  end
+#  
+#  def events_write
+#    require 'hpricot'
+#    render :xml => Events.new.to_xml
 #  end
   
   protected
