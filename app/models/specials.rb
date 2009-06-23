@@ -61,8 +61,8 @@ class Specials < XmlCache
             xm.image link[:image]
           end
         end
-        xm << messages
       end
+      xm << messages
     end
     return xm.target!
   end
